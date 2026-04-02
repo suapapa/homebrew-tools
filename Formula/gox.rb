@@ -5,20 +5,20 @@
 class Gox < Formula
   desc "Go version of npx - Execute Go binaries directly from source"
   homepage "https://github.com/suapapa/gox"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/suapapa/gox/releases/download/v0.1.1/gox_Darwin_x86_64.tar.gz"
-      sha256 "cae7f75346c8eed796bfec8dd0347f9c15a214a242e4fe671066488a6fc907ef"
+      url "https://github.com/suapapa/gox/releases/download/v0.1.2/gox_Darwin_x86_64.tar.gz"
+      sha256 "95af51b1bffb95eb0bf5f86954adedef675fcb6b61ff8b8894a66fd0f9af4c07"
 
       define_method(:install) do
         bin.install "gox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/suapapa/gox/releases/download/v0.1.1/gox_Darwin_arm64.tar.gz"
-      sha256 "fda908a5920a82fec9b29b9a21e5fa45c4c397d29d19b683be5b0ef784587396"
+      url "https://github.com/suapapa/gox/releases/download/v0.1.2/gox_Darwin_arm64.tar.gz"
+      sha256 "c0fb6262a7653a29fc21e5f76d47e9f0b8955c31029dbfcffedd6cf82f7e4c37"
 
       define_method(:install) do
         bin.install "gox"
@@ -28,15 +28,15 @@ class Gox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/suapapa/gox/releases/download/v0.1.1/gox_Linux_x86_64.tar.gz"
-      sha256 "1a9dcc0f939a5eeb59fdff55e8d4b9447e110f326916193cfd51248e2b57ee1b"
+      url "https://github.com/suapapa/gox/releases/download/v0.1.2/gox_Linux_x86_64.tar.gz"
+      sha256 "1da229ce26a2da05e7380012dc1c01f60d32e6bf8262f1ab189c9e0c8f1a359c"
       define_method(:install) do
         bin.install "gox"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/suapapa/gox/releases/download/v0.1.1/gox_Linux_arm64.tar.gz"
-      sha256 "4fb0b7290e111c3cd56ad4a5abb0c326dd949ff4ca473cb19435e8e12de1bf15"
+      url "https://github.com/suapapa/gox/releases/download/v0.1.2/gox_Linux_arm64.tar.gz"
+      sha256 "906a1e61befbf5d31af299319cafc8f8495b5300f1756ca7f94ab1c6d083f7ca"
       define_method(:install) do
         bin.install "gox"
       end
